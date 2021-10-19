@@ -12,7 +12,19 @@ class Student : public Person
         Student();
 
         //Mutator
+        /*
+        setMajor member function: sets major equal to major
+        @param - major
+        @param - None
+        */
         void setMajor(string major);
+
+        //Accessor
+        /*
+        display member function: prints the member data information
+        @param - None
+        @return - None
+        */
         void display() const;
     
     private:
