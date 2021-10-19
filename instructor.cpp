@@ -1,4 +1,6 @@
 #include <iostream>
+#include <iomanip>
+#include <cmath>
 
 #include "instructor.h"
 
@@ -26,5 +28,10 @@ void Instructor::display() const
     Person::display();
     /*cout << "Name: " << name << "\n";
       cout << "Gender: " << gender << "\n";*/
-    cout << "Salary: " << salary << "\n";
+    char separator = use_facet< numpunct<char> >(cout.getloc()).thousands_sep();
+    
+    cout << "Salary: $" << salary/1000 << separator;
+    cout.width(3); cout.fill('0');
+    cout << fmod(salary,1000) << ".00" << '\n';
+    //cout << "Salary: $" << fixed << setprecision(2) << salary << "\n";
 }
