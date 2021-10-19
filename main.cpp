@@ -10,14 +10,25 @@
 
 using namespace std;
 
+
+/*
+Purpose: Program will test the inheritance functionality of the newly defined person, instructor, and student classes. 
+Person being the base class, instructor, and student being derived from the person base class. The main program goes 
+through testing different aspects of the newly defined class and dervied classes. A simple output is printed for each
+person that is created.
+@param - None
+@return - None
+*/
+
 int main()
 {
     Person maxwell ("Maxwell Smith", "M");
-    Instructor mary;
-    Student jonathan;
-    Instructor ron("Ron Sha", "M", 50000);
     
-    printmefirst("Ron Sha", "Lab Employee");
+    Student jonathan;
+    
+    Instructor mary, ron("Ron Sha", "M", 50000);
+    
+    printmefirst("Reece Doyle", "Lab 6: Person");
     
     mary.setName("Mary Smith");
     mary.setGender("F");
